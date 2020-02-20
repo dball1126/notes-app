@@ -19,18 +19,19 @@ export class NoteDetailsComponent implements OnInit {
 
   ngOnInit() {
     // we want to find out if we are creating a new note or eidting an existing one
+    debugger
     this.route.params.subscribe((params: Params) => {
       if (params.id) {
-  
+        
         this.note = this.notesService.get(params.id);
         this.noteId = params.id;
         this.new = false;
       } else {
+        this.note = new Note();
         this.new = true;
       }
     })
-
-    this.note = new Note();
+    
   }
 
   onSubmit(form: NgForm){

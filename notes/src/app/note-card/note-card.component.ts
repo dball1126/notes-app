@@ -20,7 +20,7 @@ export class NoteCardComponent implements OnInit {
 
     let style = window.getComputedStyle(this.bodyText.nativeElement, null);
     let viewableHeight = parseInt(style.getPropertyValue("height"), 10);
-
+    
     if (this.bodyText.nativeElement.scrollHeight > viewableHeight) {
       // if there is no next overflow, show the fade out truncator
       this.renderer.setStyle(this.truncator.nativeElement, 'display', 'block')
