@@ -1,5 +1,5 @@
 <div class="note-card-container" #container>
-
+<a [routerLink]="link">
     <div class="note-card-content">
         <h1 class="note-card-title">
             {{ title }}
@@ -11,8 +11,8 @@
             </div>
         </div>
     </div>
-
-    <div class="x-button">
+</a>
+    <div class="x-button" (click)="onXButtonClick()">
 
     </div>
 
